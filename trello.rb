@@ -31,7 +31,7 @@ class CapybaraTestCase < Minitest::Test
   REAL_USER = 'rogalik1'
   PASSWORD_RUSER = 'bulkazmaslem'
 
-  def test_unexistant_login
+  def test_unexisting_login
     visit 'https://trello.com/'
     find('.btn-sm', text: 'Log In').click
     assert_text 'Log in to Trello'
@@ -40,7 +40,7 @@ class CapybaraTestCase < Minitest::Test
     assert_text 'There isn\'t an account for this username'
   end
 
-  def test_succesfull_login
+  def test_succesful_login
     visit 'https://trello.com/'
     find('.btn-sm', text: 'Log In').click
     assert_text 'Log in to Trello'
